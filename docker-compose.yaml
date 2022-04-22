@@ -5,6 +5,6 @@ services:
       context: .
     environment:
       - NODE_ENV=production
-    port:
+    ports:
       - "8001:8001"
     command: "node index.js"
