@@ -16,20 +16,5 @@ pipeline {
                 '''
             }
         }
-        stage ('Build'){
-            steps {
-                sh '''
-                    cd nodejs-example/
-                    echo $(pwd)
-                '''
-            }
-        }
-        stage ('Deploy'){
-            steps {
-                sh '''
-                    docker image ls   
-                '''
-            }
-        }
     }
 }
