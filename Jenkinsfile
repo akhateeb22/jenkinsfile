@@ -17,9 +17,9 @@ pipeline {
         }
         stage ('Building imgae'){
             steps {
-                sh '''
-                
-                '''
+                script {
+                    
+                    }
             }
         }
         stage ('Deploy'){
