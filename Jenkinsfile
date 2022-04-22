@@ -12,6 +12,7 @@ pipeline {
                     echo $(pwd)
                     ls -ltr
                     docker image build -t nodejs-testing . 
+                    docker image ls
 
                 '''
             }
