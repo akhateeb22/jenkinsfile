@@ -1,6 +1,7 @@
 pipeline {
 
     environment {
+        imagename = 'node'
     dockerImage = ''
   }
     agent any   
@@ -15,12 +16,13 @@ pipeline {
                 '''
             }
         }
-        stage ('Building imgae'){
-             steps {
-                echo 'Hello World'
-
-                script { dockerImage = docker.build .
+stage('Building image') {
+      steps{
+        script {
+          dockerImage = docker.build imagename
         }
+      }
+    }
         stage ('Deploy'){
             steps {
                 sh '''
