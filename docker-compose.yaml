@@ -4,7 +4,6 @@ services:
     build:
       context: .
     user: "node"
-    working_dir: /home/node/
     environment:
       - NODE_ENV=production
     expose:
