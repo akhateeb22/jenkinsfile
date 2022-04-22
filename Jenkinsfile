@@ -12,12 +12,13 @@ pipeline {
         stage ('Build'){
             sh '''
                 cd nodejs-training/
-                /   
+                docker-compose -f docker-compose-nodejs.yaml build
+                
             '''
         }
         stage ('Deploy'){
             sh '''
-                //Deploy image to Docker Hub    
+                docker image ls   
             '''
         }
     }
