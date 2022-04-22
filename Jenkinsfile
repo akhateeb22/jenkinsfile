@@ -4,6 +4,7 @@ pipeline {
         stage('Build') {
             agent {
                 dockerfile {
+                    image: 'testttt'
                     filename 'Dockerfile'
                     dir '.'
 
