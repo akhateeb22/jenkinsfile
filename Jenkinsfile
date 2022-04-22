@@ -19,8 +19,7 @@ pipeline {
              steps {
                 echo 'Hello World'
 
-                script { dockerImage = docker.build . 
-                }
+                script  dockerImage = docker.build .
         }
         stage ('Deploy'){
             steps {
