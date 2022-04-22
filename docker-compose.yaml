@@ -7,7 +7,7 @@ services:
     environment:
       - NODE_ENV=production
     volumes:
-      - /var/jenkins_home/workspace/nodejs/nodejs-training/:/home/node/
+      - /var/jenkins_home/workspace/nodejs/nodejs-example/:/home/node/
     expose:
       - "8001"
     command: "npm start"
