@@ -5,8 +5,8 @@ pipeline {
         stage ('GitHub Cloning!!'){
             steps {
                 sh '''
-                    rm -rf nodejs-example
-                    git clone https://github.com/akhateeb22/nodejs-example.git
+                    rm -rf nodejs-sample
+                    git clone https://github.com/akhateeb22/nodejs-sample.git
                     cd nodejs-example/
                     echo "HELLO "
                     echo $(pwd)
@@ -20,7 +20,7 @@ pipeline {
         stage ('Build'){
             steps {
                 sh '''
-                    cd nodejs-example/
+                    cd nodejs-sample/
                     echo $(pwd)
                 '''
             }
