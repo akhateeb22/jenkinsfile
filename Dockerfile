@@ -9,7 +9,7 @@ COPY ./nodejs-sample/package*.json ./
 RUN npm install
 # RUN npm ci --only=production
 
-COPY . .
+COPY ./nodejs-sample .
 
 EXPOSE 8001
 CMD [ "node", "index.js" ]
