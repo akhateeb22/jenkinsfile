@@ -11,6 +11,7 @@ pipeline {
                     echo "HELLO "
                     echo $(pwd)
                     ls -ltr
+                     docker-compose up -d 
 
                 '''
             }
@@ -20,7 +21,6 @@ pipeline {
                 sh '''
                     cd nodejs-example/
                     echo $(pwd)
-                    docker-compose up -d 
                 '''
             }
         }
