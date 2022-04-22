@@ -1,6 +1,5 @@
 FROM node:16
 
-# Create app directory
 WORKDIR /usr/src/app
 
 
@@ -11,4 +10,4 @@ RUN npm install
 
 COPY ./nodejs-sample .
 
-CMD [ "nod  e", "index.js" ]
+CMD [ "node", "index.js" ]

@@ -18,7 +18,7 @@ pipeline {
         stage ('Building imgae'){
             steps {
                 sh '''
-                    dockerImage = docker.build .
+                    dockerImage = docker.build('dockerwithnode') .
                 '''
             }
         }
