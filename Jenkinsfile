@@ -7,7 +7,7 @@ pipeline {
                 sh '''
                     rm -rf nodejs-sample
                     git clone https://github.com/akhateeb22/nodejs-sample.git
-                    cd nodejs-example/
+                    cd nodejs-sample/
                     echo "HELLO "
                     echo $(pwd)
                     ls -ltr
