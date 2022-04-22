@@ -17,7 +17,10 @@ pipeline {
         }
         stage ('Building imgae'){
             steps {
-                
+                sh 'echo "Hello World"'
+                script {
+                    dockerImage = docker.build .
+                }
             }
         }
         stage ('Deploy'){
