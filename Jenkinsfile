@@ -9,6 +9,9 @@ pipeline {
                     label 'my-defined-label'
                 }
             }
+            steps {
+                sh 'helllo'
+            }
         }
     }
 }
