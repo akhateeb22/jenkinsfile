@@ -1,4 +1,8 @@
 pipeline {
+
+    environment {
+    dockerImage = ''
+  }
     agent any   
     
     stages {
@@ -8,20 +12,13 @@ pipeline {
                     rm -rf nodejs-sample
                     git clone https://github.com/akhateeb22/nodejs-sample.git
                     cd nodejs-sample/
-                    echo "HELLO "
-                    echo $(pwd)
-                    ls -ltr
-                    docker container rm -f nodejs_node1
-                    docker-compose up -d 
-
                 '''
             }
         }
-        stage ('Build'){
+        stage ('Building imgae'){
             steps {
                 sh '''
-                    cd nodejs-sample/
-                    echo $(pwd)
+                    dockerImage = docker.build .
                 '''
             }
         }
