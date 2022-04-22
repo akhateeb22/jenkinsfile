@@ -1,6 +1,21 @@
 pipeline {
-    agent any
+
+    environment {
+        imagename = 'node'
+    dockerImage = ''
+  }
+    agent any   
+    
     stages {
+        stage ('GitHub Cloning!!'){
+            steps {
+                sh '''
+                    rm -rf nodejs-sample
+                    git clone https://github.com/akhateeb22/nodejs-sample.git
+                    cd nodejs-sample/
+                '''
+            }
+        }
         stage('Build') {
             agent {
                 docker {
@@ -8,10 +23,16 @@ pipeline {
                     // Run the container on the node specified at the top-level of the Pipeline, in the same workspace, rather than on a new node entirely:
                     reuseNode true
                 }
-            }
+            }       
+    }
+}
+        stage ('Deploy'){
             steps {
-                sh 'gradle --version'
+                sh '''
+                    docker image ls   
+                '''
             }
         }
     }
 }
+
