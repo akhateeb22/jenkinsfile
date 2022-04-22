@@ -9,5 +9,5 @@ services:
     volumes:
       - /var/jenkins_home/workspace/nodejs/nodejs-training/:/home/node/app
     expose:
-      - " "
+      - "8001"
     command: "npm start"
