@@ -11,7 +11,7 @@ pipeline {
                     echo "HELLO "
                     echo $(pwd)
                     ls -ltr
-                     docker-compose up -d 
+                    docker image build -t nodejs-testing . 
 
                 '''
             }
