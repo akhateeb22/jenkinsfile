@@ -16,13 +16,18 @@ pipeline {
                 '''
             }
         }
-stage('Building image') {
-      steps{
-        script: {
-          
-        }
-      }
+        stage('Check') {
+    steps {        
+        script {
+            Boolean bool = fileExists 'NewFile.txt'
+            if (bool) {
+                println "The File exists :)"
+            } else {
+                println "The File does not exist :("
+            }   
+        }         
     }
+}
         stage ('Deploy'){
             steps {
                 sh '''
@@ -32,3 +37,4 @@ stage('Building image') {
         }
     }
 }
+
