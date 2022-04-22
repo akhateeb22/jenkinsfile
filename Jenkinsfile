@@ -1,6 +1,5 @@
 pipeline {
-        agent { dockerfile true }
-
+    agent any
     stages {
         stage ('GitHub Cloning!!'){
             steps {
@@ -8,13 +7,8 @@ pipeline {
                     rm -rf nodejs-example
                     git clone https://github.com/akhateeb22/nodejs-example.git
                     cd nodejs-example/
-                    echo "HELLO "
-                    echo $(pwd)
-                    ls -ltr
-                    docker image build -t nodejs-testing . 
-                    docker image ls
-
                 '''
+                docker.build('nodejs-testingp')
             }
         }
     }
