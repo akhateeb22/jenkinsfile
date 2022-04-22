@@ -4,7 +4,7 @@ FROM node:16
 WORKDIR /usr/src/app
 
 
-COPY ./nodejs-example/package*.json ./
+COPY ./nodejs-sample/package*.json ./
 
 RUN npm install
 # RUN npm ci --only=production
