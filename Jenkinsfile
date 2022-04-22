@@ -17,7 +17,7 @@ pipeline {
         stage ('Building imgae'){
             steps {
                 script {
-                    dockerImage = docker.build imagename
+                    dockerImage = docker.build .
         }
             }
         }
