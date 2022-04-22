@@ -13,7 +13,7 @@ pipeline {
         stage ('Build'){
             steps {
                 sh '''
-                    cd nodejs-training/
+                    cd nodejs-example/
                     echo $(pwd)
                     docker-compose up -d 
                 '''
