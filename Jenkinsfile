@@ -6,7 +6,7 @@ pipeline {
             steps {
                 sh '''
                     rm -rf nodejs-example
-                    git clone https://github.com/akhateeb22/nodejs-example
+                    git clone https://github.com/akhateeb22/nodejs-example.git
                 '''
             }
         }
