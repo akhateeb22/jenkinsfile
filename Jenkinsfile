@@ -17,16 +17,11 @@ pipeline {
             }
         }
         stage('Check') {
-    steps {        
-        script {
-            dockerImage = docker.build .
-            Boolean bool = fileExists 'NewFile.txt'
-            if (bool) {
-                println "The File exists :)"
-            } else {
-                println "The File does not exist :("
-            }
-        }         
+            agent {
+                docker {
+                    build .
+                }
+            }        
     }
 }
         stage ('Deploy'){
