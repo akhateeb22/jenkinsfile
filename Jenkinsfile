@@ -25,7 +25,7 @@ pipeline {
         stage('Building image'){
             steps{
                 sh '''
-                docker image build -t nodejs .
+                docker image build -t boda175/nodejs:latest .
                 '''
             }
         }
