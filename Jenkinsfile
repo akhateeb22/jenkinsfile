@@ -19,7 +19,7 @@ pipeline {
         stage('Check') {
     steps {        
         script {
-            dockerImage = docker.build .
+            def dockerImage = docker.build .
             Boolean bool = fileExists 'NewFile.txt'
             if (bool) {
                 println "The File exists :)"
