@@ -1,5 +1,4 @@
-pipeline {
-        agent { dockerfile true }
+node {
 
     stages {
         stage ('GitHub Cloning!!'){
