@@ -3,9 +3,7 @@ services:
   node:
     build:
       context: .
-    user: "node"
     environment:
       - NODE_ENV=production
     expose:
       - "8001"
-    command: "npm start"
