@@ -13,7 +13,7 @@ pipeline {
             steps {
                 sh '''
                     cd nodejs-training/
-                    docker-compose -f docker-compose-nodejs.yaml build 
+                    docker-compose build 
                 '''
             }
         }
