@@ -1,17 +1,29 @@
 pipeline {
-    agent any
-    stages {
-        stage('Build') {
-            agent {
-                dockerfile {
-                    image: 'testttt'
-                    filename 'Dockerfile'
-                    dir '.'
 
-                }
-            }
+    agent any   
+    
+    stages {
+        stage ('GitHub Cloning!!'){
             steps {
-                sh 'helllo'
+                sh '''
+                    rm -rf nodejs-sample
+                    git clone https://github.com/akhateeb22/nodejs-sample.git
+                    cd nodejs-sample/
+                '''
+            }
+        }
+        stage('Building image'){
+            steps{
+                sh '''
+                docker image build -t testttt .
+                '''
+            }
+        }
+        stage ('Deploy'){
+            steps {
+                sh '''
+                    docker image ls   
+                '''
             }
         }
     }
