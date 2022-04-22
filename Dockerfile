@@ -11,5 +11,4 @@ RUN npm install
 
 COPY ./nodejs-sample .
 
-EXPOSE 8001
-CMD [ "node", "index.js" ]
+CMD [ "nod  e", "index.js" ]
