@@ -17,7 +17,6 @@ pipeline {
         stage ('Building imgae'){
             steps {
                     dockerImage  = docker.build .
-            
             }
         }
         stage ('Deploy'){
