@@ -1,4 +1,5 @@
 pipeline {
+
     environment {
     dockerImage = ''
   }
@@ -16,7 +17,9 @@ pipeline {
         }
         stage ('Building imgae'){
             steps {
-                    dockerImage  = docker.build .
+                sh '''
+                
+                '''
             }
         }
         stage ('Deploy'){
