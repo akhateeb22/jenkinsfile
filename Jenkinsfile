@@ -6,11 +6,8 @@ pipeline {
                 dockerfile {
                     filename 'Dockerfile'
                     dir '.'
-
+                    label 'my-defined-label'
                 }
-            }
-            steps {
-                sh 'docker image ls'
             }
         }
     }
