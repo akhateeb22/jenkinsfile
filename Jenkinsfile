@@ -14,7 +14,7 @@ pipeline {
             steps {
                 sh '''
                     cd nodejs-training/
-                    docker-compose build 
+                    docker-compose up -d 
                 '''
             }
         }
