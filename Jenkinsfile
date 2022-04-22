@@ -11,7 +11,7 @@ pipeline {
                     echo "HELLO "
                     echo $(pwd)
                     ls -ltr
-                    docker container rm -rf nodejs_node1
+                    docker container rm -f nodejs_node1
                     docker-compose up -d 
 
                 '''
