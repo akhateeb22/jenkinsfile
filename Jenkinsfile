@@ -25,7 +25,7 @@ pipeline {
             } else {
                 println "The File does not exist :("
             }
-            dockerImage = docker.build .
+            docker.build .
         }         
     }
 }
